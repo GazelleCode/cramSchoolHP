@@ -1,1 +1,1008 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="国立大学の推薦入試・総合型選抜に特化した家庭教師チーム（講師3名）。志望理由書／自己推薦書、活動実績整理、面接・口頭試問、学力対策まで一貫支援。" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>（仮）国立大 推薦・総合型選抜 家庭教師｜講師3名で伴走</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="（仮）国立大 推薦・総合型選抜 家庭教師｜講師3名で伴走" />
+  <meta property="og:description" content="国立大学の推薦入試・総合型選抜に特化。書類・面接・口頭試問・学力対策を講師3名で一貫支援。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <!-- <meta property="og:url" content="https://example.com/" /> -->
+  <!-- <meta property="og:image" content="https://example.com/ogp.jpg" /> -->
+
+  <style>
+    :root{
+      --bg: #0b1020;
+      --surface: #0f1730;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.58);
+      --line: rgba(255,255,255,.12);
+      --accent: #9fd0ff;  /* 控えめな青 */
+      --accent2:#c6ffd7;  /* うすい緑 */
+      --danger:#ffb4b4;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius2: 22px;
+      --max: 1120px;
+      --pad: clamp(16px, 3vw, 28px);
+      --h1: clamp(26px, 3.2vw, 40px);
+      --h2: clamp(20px, 2.2vw, 28px);
+      --h3: 18px;
+      --p: 15.5px;
+      --lh: 1.9;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN",
+              "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", Arial, sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 0%, rgba(159,208,255,.18), transparent 60%),
+        radial-gradient(1000px 650px at 90% 20%, rgba(198,255,215,.12), transparent 55%),
+        linear-gradient(180deg, #070b16 0%, #0b1020 40%, #070b16 100%);
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .container{ max-width: var(--max); margin:0 auto; padding: 0 var(--pad); }
+
+    /* Header */
+    header{
+      position: sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,22,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 14px; padding: 14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width: 240px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, rgba(159,208,255,.9), rgba(198,255,215,.8));
+      box-shadow: 0 8px 18px rgba(0,0,0,.25);
+      flex: 0 0 auto;
+    }
+    .brand strong{ font-size: 14.5px; letter-spacing:.02em; }
+    .brand span{ display:block; font-size: 12px; color: var(--muted2); margin-top:2px; }
+
+    .navlinks{
+      display:flex; align-items:center; gap: 18px;
+      color: var(--muted);
+      font-size: 13.5px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .navlinks a{ padding: 8px 8px; border-radius: 10px; }
+    .navlinks a:hover{ background: rgba(255,255,255,.06); text-decoration:none; }
+    .cta{
+      display:flex; align-items:center; gap:10px;
+      margin-left: 10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor:pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      text-decoration:none;
+      user-select:none;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.09);
+      border-color: rgba(255,255,255,.18);
+      text-decoration:none;
+    }
+    .btn.primary{
+      border-color: rgba(159,208,255,.38);
+      background: linear-gradient(135deg, rgba(159,208,255,.22), rgba(198,255,215,.14));
+    }
+
+    /* Hero */
+    .hero{
+      padding: 46px 0 28px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .heroCard{
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroMain{ padding: 28px; }
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-bottom: 14px;
+    }
+    h1{
+      margin: 0 0 10px;
+      font-size: var(--h1);
+      line-height: 1.25;
+      letter-spacing: .01em;
+    }
+    .lead{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: var(--lh);
+    }
+    .heroKPI{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .kpi{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      border-radius: 14px;
+      padding: 12px 12px;
+    }
+    .kpi strong{ display:block; font-size: 14px; }
+    .kpi span{ display:block; margin-top:4px; font-size: 12.5px; color: var(--muted2); line-height: 1.5; }
+
+    .heroSide{
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sideBox{
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      padding: 14px 14px;
+    }
+    .sideTitle{
+      font-size: 13.5px;
+      color: var(--muted);
+      margin:0 0 8px;
+      letter-spacing:.02em;
+    }
+    .sideList{
+      margin:0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+    .note{
+      margin:0;
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.8;
+    }
+
+    /* Sections */
+    section{ padding: 34px 0; }
+    .sectionHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    h2{
+      margin:0;
+      font-size: var(--h2);
+      letter-spacing:.01em;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.7;
+      max-width: 70ch;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+    }
+    .grid2{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+    }
+    .card{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.18);
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size: var(--h3);
+      letter-spacing:.01em;
+    }
+    .card p, .card li{
+      font-size: var(--p);
+      color: var(--muted);
+      line-height: var(--lh);
+    }
+    .card p{ margin: 0; }
+    .card ul{ margin: 10px 0 0; padding-left: 18px; }
+
+    /* Timeline */
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+    }
+    .stepNum{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:28px; height:28px; border-radius: 10px;
+      background: rgba(159,208,255,.18);
+      border: 1px solid rgba(159,208,255,.30);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .small{
+      font-size: 12.5px;
+      color: var(--muted2);
+      line-height: 1.8;
+      margin-top: 8px;
+    }
+
+    /* Pricing */
+    .pricing{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .priceBox{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.14);
+      padding: 18px;
+    }
+    .priceRow{
+      display:flex; align-items:baseline; justify-content:space-between; gap: 12px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,.10);
+    }
+    .priceRow:first-child{ border-top:none; padding-top: 0; }
+    .plan{
+      font-weight: 700;
+      letter-spacing:.01em;
+    }
+    .yen{
+      font-weight: 800;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+    .muted{ color: var(--muted2); font-size: 12.5px; line-height: 1.8; }
+
+    /* FAQ */
+    details{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      padding: 12px 14px;
+    }
+    details + details{ margin-top: 10px; }
+    summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: var(--text);
+      list-style:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    details p{ margin: 10px 0 0; color: var(--muted); line-height: var(--lh); font-size: var(--p); }
+
+    /* Contact */
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    label{
+      display:block;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    input, textarea, select{
+      width:100%;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.20);
+      color: var(--text);
+      padding: 11px 12px;
+      outline:none;
+      font-family: var(--font);
+      font-size: 14px;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(159,208,255,.45);
+      box-shadow: 0 0 0 3px rgba(159,208,255,.12);
+    }
+    .formRow{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .formFull{ grid-column: 1 / -1; }
+    .agree{
+      display:flex; gap: 10px; align-items:flex-start;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.7;
+      margin-top: 10px;
+    }
+    .agree input{ width: 18px; height:18px; margin-top: 2px; }
+    .error{
+      display:none;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,180,180,.35);
+      background: rgba(255,180,180,.10);
+      color: var(--danger);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .success{
+      display:none;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(198,255,215,.30);
+      background: rgba(198,255,215,.10);
+      color: rgba(198,255,215,.95);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer{
+      padding: 26px 0 30px;
+      border-top: 1px solid var(--line);
+      background: rgba(7,11,22,.35);
+      margin-top: 16px;
+    }
+    .footGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .footSmall{
+      margin: 10px 0 0;
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.8;
+    }
+    .footLinks{
+      display:flex; flex-wrap: wrap; gap: 10px;
+      justify-content:flex-end;
+    }
+    .pill{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .pricing{ grid-template-columns: 1fr; }
+      .steps{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .contact{ grid-template-columns: 1fr; }
+      .formRow{ grid-template-columns: 1fr; }
+      .footGrid{ grid-template-columns: 1fr; }
+      .footLinks{ justify-content:flex-start; }
+      .navlinks{ display:none; } /* 必要なら後でモバイルメニューに拡張 */
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "（仮）国立大 推薦・総合型選抜 家庭教師",
+    "description": "国立大学の推薦入試・総合型選抜に特化した家庭教師チーム（講師3名）。書類・面接・口頭試問・学力対策を一貫支援。",
+    "areaServed": "JP",
+    "serviceType": ["推薦入試対策", "総合型選抜対策", "志望理由書添削", "面接対策", "口頭試問対策"],
+    "url": "https://example.com"
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav" aria-label="サイトヘッダー">
+        <a class="brand" href="#top" aria-label="トップへ">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <strong>（仮）国立大 推薦・総合型選抜 家庭教師</strong>
+            <span>講師3名で「書類・面接・学力」を一貫支援</span>
+          </div>
+        </a>
+
+        <nav class="navlinks" aria-label="ページ内ナビゲーション">
+          <a href="#services">支援内容</a>
+          <a href="#strengths">強み</a>
+          <a href="#tutors">講師</a>
+          <a href="#process">進め方</a>
+          <a href="#pricing">料金目安</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn" href="#contact">無料相談（仮）</a>
+          <a class="btn primary" href="#contact">最短で日程調整</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="heroGrid">
+          <div class="heroCard">
+            <div class="heroMain">
+              <div class="badge">
+                <span aria-hidden="true">●</span>
+                <span>国立大 推薦入試／総合型選抜に特化（一般入試の併願も対応）</span>
+              </div>
+
+              <h1>書類で落とさない。面接で崩れない。<br>「合格までの設計」を、講師3名で。</h1>
+              <p class="lead">
+                推薦・総合型は、情報戦と設計力が合否を左右します。志望理由書／自己推薦書の構造化、活動実績の棚卸し、
+                面接・口頭試問、学力（共テ・2次）まで、一本の戦略としてつなげて伴走します。
+              </p>
+
+              <div class="cta" style="margin: 10px 0 0;">
+                <a class="btn primary" href="#contact">無料相談（仮）を予約する</a>
+                <a class="btn" href="#services">支援内容を見る</a>
+              </div>
+
+              <div class="heroKPI" role="list" aria-label="特長の要点">
+                <div class="kpi" role="listitem">
+                  <strong>設計→執筆→検証</strong>
+                  <span>書類は「評価軸→根拠→表現」を分離して詰める</span>
+                </div>
+                <div class="kpi" role="listitem">
+                  <strong>面接は再現性</strong>
+                  <span>想定問答より「論点地図」と「詰めの反射神経」</span>
+                </div>
+                <div class="kpi" role="listitem">
+                  <strong>講師3名体制</strong>
+                  <span>分業で速度と品質を両立（担当＋相互レビュー）</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="heroCard heroSide" aria-label="補足情報">
+            <div class="sideBox">
+              <p class="sideTitle">対象（例）</p>
+              <ul class="sideList">
+                <li>国立大学：推薦入試／総合型選抜</li>
+                <li>学部：理系・文系（要相談）</li>
+                <li>高校1〜3年、既卒（要相談）</li>
+              </ul>
+              <p class="note">※大学・学部・方式により最適戦略が異なります。初回で整理します。</p>
+            </div>
+
+            <div class="sideBox">
+              <p class="sideTitle">よくある課題</p>
+              <ul class="sideList">
+                <li>活動実績が散らばっていて、一本の軸にできない</li>
+                <li>志望理由が「好き」止まりで評価軸に刺さらない</li>
+                <li>面接で深掘りされると論理が崩れる</li>
+              </ul>
+            </div>
+
+            <div class="sideBox">
+              <p class="sideTitle">対応形式</p>
+              <ul class="sideList">
+                <li>オンライン（Zoom等）</li>
+                <li>ドキュメント共有（Google Docs等）</li>
+                <li>チャット相談（時間内）</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>支援内容</h2>
+            <p class="sub">「提出物」「口頭」「学力」を分断せず、同じ評価軸で整合させます。</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>書類（志望理由書／自己推薦書）</h3>
+            <p>
+              大学のアドミッション・ポリシーを読み解き、評価軸→根拠→構成→文章化の順で詰めます。
+              添削は「直す」だけでなく、再現可能な型として渡します。
+            </p>
+            <ul>
+              <li>活動の棚卸し、実績の言語化</li>
+              <li>研究計画・学修計画（必要な場合）</li>
+              <li>証拠（成果物/ポートフォリオ）の設計</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>面接／口頭試問</h3>
+            <p>
+              典型質問の暗記ではなく、深掘りに耐える「論点地図」を作り、模擬面接で反射神経を鍛えます。
+              理系の口頭試問は、思考プロセスの見せ方まで指導します。
+            </p>
+            <ul>
+              <li>想定質問の生成（方式別）</li>
+              <li>深掘りの分岐（突っ込み）対策</li>
+              <li>録画レビュー、改善ループ</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>学力対策（併願含む）</h3>
+            <p>
+              推薦・総合型でも学力が合否の決め手になるケースがあります。共テ／2次（必要科目）を
+              逆算し、書類・面接と整合する学習計画を引きます。
+            </p>
+            <ul>
+              <li>弱点診断とロードマップ作成</li>
+              <li>過去問の解釈（採点基準の推定）</li>
+              <li>短期間の詰め（直前期）</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRENGTHS -->
+    <section id="strengths">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>強み</h2>
+            <p class="sub">個別最適に寄せつつ、品質管理はチームで担保します。</p>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>講師3名の分業＋相互レビュー</h3>
+            <p>
+              担当講師が主導しつつ、別講師が「評価軸」「論理」「表現」をクロスチェックします。
+              一人塾にありがちな偏りや見落としを減らし、提出品質を上げます。
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>合否の見立てと戦略変更が速い</h3>
+            <p>
+              書類の通過見込み、面接で狙われる論点、学力の足切りリスクなどを早期に可視化し、
+              必要なら方式変更・併願設計も含めて現実的な打ち手に切り替えます。
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>「強みの捏造」はしない</h3>
+            <p>
+              不自然な盛りは面接で崩れます。手持ちの経験を「評価される形」に変換し、証拠と整合させます。
+              できない約束はしません。代わりに、伸ばせる最短の行動を提示します。
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>やることが明確な進行</h3>
+            <p>
+              初回で、提出物の要件、締切、評価軸、現状の材料を整理し、週単位のToDoに落とします。
+              「何から手をつけるべきか」が曖昧な状態を終わらせます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUTORS -->
+    <section id="tutors">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>講師</h2>
+            <p class="sub">ここは実名・学歴・実績に差し替えてください（現状はプレースホルダ）。</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>講師A（統括／戦略設計）</h3>
+            <p>
+              専門：評価軸の解釈、志望理由の構造化、併願設計。<br>
+              経歴：例）国立大◯◯学部／塾・家庭教師◯年。<br>
+              担当：初回設計、全体ロードマップ、最終レビュー。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>講師B（書類・表現／添削）</h3>
+            <p>
+              専門：文章の論理・可読性、研究/学修計画、ポートフォリオ。<br>
+              経歴：例）教育・編集／添削◯件。<br>
+              担当：書類の版管理、添削、提出物の整合チェック。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>講師C（面接／口頭試問）</h3>
+            <p>
+              専門：深掘り対応、口頭試問、プレゼン・質疑。<br>
+              経歴：例）理系分野／面接指導◯年。<br>
+              担当：模擬面接、録画レビュー、弱点の矯正。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>進め方</h2>
+            <p class="sub">最短で合格確率を上げるための標準フロー（方式により調整）。</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="card">
+            <div class="stepNum">1</div>
+            <h3>無料相談（仮）／現状整理</h3>
+            <p>志望校・方式・締切・材料（活動/成績/成果物）を棚卸しし、合格要件を明確化。</p>
+            <div class="small">所要：30〜45分（オンライン）</div>
+          </div>
+
+          <div class="card">
+            <div class="stepNum">2</div>
+            <h3>戦略設計（評価軸→根拠）</h3>
+            <p>大学の評価軸を仮説化し、あなたの強みを「証拠付き主張」に落とし込みます。</p>
+            <div class="small">アウトプット：骨子、ToDo、必要資料リスト</div>
+          </div>
+
+          <div class="card">
+            <div class="stepNum">3</div>
+            <h3>書類作成＋面接準備</h3>
+            <p>書類は版管理で磨き込み。面接は論点地図→模擬→録画レビューで反復します。</p>
+            <div class="small">週次：提出物の締切から逆算して運用</div>
+          </div>
+
+          <div class="card">
+            <div class="stepNum">4</div>
+            <h3>直前期：詰めと再現性</h3>
+            <p>本番で崩れないために、深掘り質問・口頭試問の「想定外」を潰します。</p>
+            <div class="small">必要に応じて：短期集中枠も用意（要相談）</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>料金目安（仮）</h2>
+            <p class="sub">ここは必ず実際の料金体系に差し替えてください（特商法・表記にも関係します）。</p>
+          </div>
+        </div>
+
+        <div class="pricing">
+          <div class="priceBox">
+            <div class="priceRow">
+              <div>
+                <div class="plan">スポット相談（60分）</div>
+                <div class="muted">戦略整理／課題特定／次にやることの提示</div>
+              </div>
+              <div class="yen">¥00,000〜</div>
+            </div>
+
+            <div class="priceRow">
+              <div>
+                <div class="plan">書類集中（添削3往復）</div>
+                <div class="muted">志望理由書・自己推薦書など（方式により増減）</div>
+              </div>
+              <div class="yen">¥00,000〜</div>
+            </div>
+
+            <div class="priceRow">
+              <div>
+                <div class="plan">伴走プラン（月額）</div>
+                <div class="muted">週次面談＋添削＋面接（講師3名レビュー込み）</div>
+              </div>
+              <div class="yen">¥00,000〜</div>
+            </div>
+
+            <p class="muted" style="margin-top: 10px;">
+              ※実費（受験料・教材費・交通費等）は別。<br>
+              ※支援範囲と回数で見積りが変わります。初回で「必要十分」に設計します。
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>料金設計の考え方</h3>
+            <p>
+              推薦・総合型は、提出物と面接の品質が勝負です。必要な工数（設計／執筆／レビュー／模擬）を見積もり、
+              過不足なく組みます。無理な回数販売はしません。
+            </p>
+            <ul>
+              <li>締切までの残日数</li>
+              <li>方式（推薦／総合型／口頭試問の有無）</li>
+              <li>材料（活動・成果物・学力）の現状</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>FAQ</h2>
+            <p class="sub">初回相談で多い質問をまとめています。</p>
+          </div>
+        </div>
+
+        <details>
+          <summary>活動実績が強くない気がします。間に合いますか？</summary>
+          <p>
+            多くの場合「強さ」は整理と見せ方で変わります。まず材料を棚卸しし、評価軸に刺さる形に変換します。
+            必要なら、短期間で積める行動（成果物化・検証・記録）を提案します。
+          </p>
+        </details>
+
+        <details>
+          <summary>志望理由書は何回くらい直すべきですか？</summary>
+          <p>
+            回数より、版ごとの目的が重要です。一般に「骨子→論理→証拠→表現→最終」など段階的に詰めます。
+            早期に骨子を固めるほど、後半の修正が少なくなります。
+          </p>
+        </details>
+
+        <details>
+          <summary>一般入試（共テ・2次）との両立は可能ですか？</summary>
+          <p>
+            可能です。ただし両立には「先に設計」が必須です。書類作成の山と学習の山をずらし、締切から逆算して配分します。
+          </p>
+        </details>
+
+        <details>
+          <summary>地方在住でも受講できますか？</summary>
+          <p>
+            オンライン完結で対応可能です。書類は共有ドキュメントで版管理、面接は録画レビューを併用します。
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>お問い合わせ・無料相談（仮）</h2>
+            <p class="sub">24時間以内の返信を目標（仮）。急ぎの場合は「締切日」を必ず記載してください。</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="card">
+            <h3>連絡先（差し替え）</h3>
+            <p>
+              Email：<a href="mailto:contact@example.com">contact@example.com</a><br>
+              受付：平日 18:00〜22:00／土日 10:00〜20:00（仮）<br>
+              対応：オンライン（全国）
+            </p>
+            <p class="small">
+              ※このサイトは雛形です。実運用時は「特定商取引法に基づく表記」「プライバシーポリシー」を必ず用意してください。
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>フォーム</h3>
+            <form id="contactForm" novalidate>
+              <div class="formRow">
+                <div>
+                  <label for="name">お名前（必須）</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div>
+                  <label for="email">メール（必須）</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+              </div>
+
+              <div class="formRow" style="margin-top: 10px;">
+                <div>
+                  <label for="grade">学年</label>
+                  <select id="grade" name="grade">
+                    <option value="">選択してください</option>
+                    <option>高1</option>
+                    <option>高2</option>
+                    <option>高3</option>
+                    <option>既卒</option>
+                    <option>その他</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="deadline">主な締切（任意）</label>
+                  <input id="deadline" name="deadline" type="text" placeholder="例：9/10 出願締切、10月 面接" />
+                </div>
+              </div>
+
+              <div class="formRow formFull" style="margin-top: 10px;">
+                <div>
+                  <label for="target">志望校・方式（任意）</label>
+                  <input id="target" name="target" type="text" placeholder="例：〇〇大学 △△学部 総合型（一次：書類／二次：面接）" />
+                </div>
+              </div>
+
+              <div class="formRow formFull" style="margin-top: 10px;">
+                <div>
+                  <label for="message">相談内容（必須）</label>
+                  <textarea id="message" name="message" required placeholder="現状（活動・成績・提出物の進捗）と、困っている点を書いてください。"></textarea>
+                </div>
+              </div>
+
+              <div class="agree">
+                <input id="agree" type="checkbox" required />
+                <label for="agree" style="margin:0;">
+                  プライバシーポリシー（仮）に同意します（※公開前に必ずページを用意してください）
+                </label>
+              </div>
+
+              <div class="error" id="formError" role="alert"></div>
+              <div class="success" id="formSuccess" role="status"></div>
+
+              <div style="margin-top: 12px; display:flex; gap:10px; flex-wrap: wrap;">
+                <button class="btn primary" type="submit">送信（仮：実装前）</button>
+                <a class="btn" href="#top">上に戻る</a>
+              </div>
+
+              <p class="muted" style="margin-top: 10px;">
+                ※この雛形はフォーム送信を実際には行いません。運用時はサーバー側処理（またはフォームサービス）に接続してください。
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footGrid">
+        <div>
+          <strong>（仮）国立大 推薦・総合型選抜 家庭教師</strong>
+          <p class="footSmall">
+            本サイトは雛形です。運用前に、料金・連絡先・規約・プライバシーポリシー・特商法表記を整備してください。<br>
+            © <span id="year"></span> Your Team. All rights reserved.
+          </p>
+        </div>
+
+        <div class="footLinks" aria-label="フッターリンク">
+          <a class="pill" href="#services">支援内容</a>
+          <a class="pill" href="#tutors">講師</a>
+          <a class="pill" href="#pricing">料金目安</a>
+          <a class="pill" href="#faq">FAQ</a>
+          <a class="pill" href="#contact">お問い合わせ</a>
+          <!-- <a class="pill" href="/privacy.html">プライバシーポリシー</a> -->
+          <!-- <a class="pill" href="/tokusho.html">特定商取引法に基づく表記</a> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 年号
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // スムーススクロール（ブラウザ対応が十分ならCSSでも可）
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        if (!id || id === "#") return;
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", id);
+      });
+    });
+
+    // フォーム（雛形：実送信しない）
+    const form = document.getElementById("contactForm");
+    const err = document.getElementById("formError");
+    const ok = document.getElementById("formSuccess");
+
+    function showError(msg){
+      ok.style.display = "none";
+      err.textContent = msg;
+      err.style.display = "block";
+    }
+    function showSuccess(msg){
+      err.style.display = "none";
+      ok.textContent = msg;
+      ok.style.display = "block";
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const agree = document.getElementById("agree").checked;
+
+      if (!name) return showError("お名前を入力してください。");
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showError("有効なメールアドレスを入力してください。");
+      if (!message) return showError("相談内容を入力してください。");
+      if (!agree) return showError("同意チェックが必要です。");
+
+      // 実運用時はここで fetch() 等で送信処理へ
+      showSuccess("送信内容（仮）を受け付けました。実運用時はサーバー送信に接続してください。");
+      form.reset();
+    });
+  </script>
+</body>
+</html>
 
